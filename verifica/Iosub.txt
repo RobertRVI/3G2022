@@ -1,0 +1,35 @@
+
+Stampo il veicolo che è entrato prima:
+
+Veicolo : Targata: QS977UT | Orario Entrata: 13 | Orario Uscita: 24
+
+Stampo tutti i veicolo:
+
+Veicolo : Targata: MI971PC | Orario Entrata: 14 | Orario Uscita: 24
+Veicolo : Targata: XB159RP | Orario Entrata: 1 | Orario Uscita: 24
+Veicolo : Targata: VI263DB | Orario Entrata: 9 | Orario Uscita: 24
+Veicolo : Targata: QS977UT | Orario Entrata: 13 | Orario Uscita: 24
+Veicolo : Targata: HH364CP | Orario Entrata: 14 | Orario Uscita: 24
+
+
+Stampo il report Giornaliero:
+
+Veicolo : Targata: MI971PC | Orario Entrata: 14 | Orario Uscita: 24 | Tariffa: 10 - Pagato 100
+Veicolo : Targata: XB159RP | Orario Entrata: 1 | Orario Uscita: 24 | Tariffa: 10 - Pagato 230
+Veicolo : Targata: VI263DB | Orario Entrata: 9 | Orario Uscita: 24 | Tariffa: 10 - Pagato 150
+Veicolo : Targata: QS977UT | Orario Entrata: 13 | Orario Uscita: 24 | Tariffa: 10 - Pagato 110
+Veicolo : Targata: HH364CP | Orario Entrata: 14 | Orario Uscita: 24 | Tariffa: 10 - Pagato 100
+
+Oggi la concessionaria ha incassato 690 €
+
+
+Posti dinamici:
+
+Stampo tutti i veicolo nei pargheggi dinamici:
+
+Veicolo : Targata: QB208DH | Orario Entrata: 8 | Orario Uscita: 24
+Veicolo : Targata:  | Orario Entrata: 0 | Orario Uscita: 0
+Veicolo : Targata:  | Orario Entrata: 0 | Orario Uscita: 0
+Veicolo : Targata:  | Orario Entrata: 0 | Orario Uscita: 0
+Veicolo : Targata:  | Orario Entrata: 0 | Orario Uscita: 0
+

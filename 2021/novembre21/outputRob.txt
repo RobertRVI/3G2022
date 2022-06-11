@@ -1,0 +1,10 @@
+
+
+Il primo numero e 3
+Il secondo numero e 5
+Il terzo numero e 10
+Il quarto numero e 20
+
+La media intera dei numeri e 9
+La media reale dei numeri e 9.50
+

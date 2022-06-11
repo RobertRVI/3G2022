@@ -1,0 +1,33 @@
+
+Compito in classe 29 marzo 2022 - Classe 3 G
+Robert Valentin Iosub - Firma ____________________
+
+
+
+Stampo l'asse delle x vuoto
+--------------------------------------|--------------------------------------x
+
+
+Inserisco i punti A e B
+--------------------------------------|-------A---B--------------------------x
+
+Il punto A esiste ed e nella posizione 8
+Il punto B esiste ed e nella posizione 12
+Il punto C non esiste
+
+Cancello i punti A e B
+--------------------------------------|--------------------------------------x
+
+
+Calcolo della equazione: 2x + 16 = 0 			 soluzione: x = -8
+------------------------------X-------|--------------------------------------x
+
+
+Calcolo della equazione: 2x^2 + 16x + 10 = 0 	 soluzione: x1 = -2  x2 = -28
+----------X-------------------------X-|---------------------------------------
+
+
+Calcolo della disequazione: 2x + 16 > 0 		 soluzione: x > -8 
+------------------------------X***********************************************
+
+

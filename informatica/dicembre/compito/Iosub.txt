@@ -1,0 +1,217 @@
+/*
+12 dicembre 2021 Montecatini Terme Robert
+
+Leggere N caratteri e stabilire se sono lettere maiuscole,
+minuscole, numeri o altri caratteri (Uso else if).
+Stampare il carattere (uso %c) con l'informativa
+
+ciclo for - else if
+*/
+
+#include<stdio.h>
+#define ELEMENTI 128
+
+int main()
+{
+  int array[ELEMENTI];
+
+  printf("\nVado a stampare i caratteri della tabella ASCII.\nTranne quelli di controllo che non si possono stampare.\n");
+
+  printf("\n-------------------------------------------------------------------\n");
+
+  for(int i = 0; i < ELEMENTI; i++)
+  {
+    array[i] = i;
+
+    if((i >= 32) && (i <= 47))
+    {
+      printf("\n%3d) Carattere: %c\tTipo: Punteggiatura", i, array[i]);
+    }
+
+    else if((i >= 48) && (i <= 57))
+    {
+    
+      if (i == 48)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      
+      printf("\n%3d) Carattere: %c\tTipo: Numero", i, array[i]);
+    }
+
+    else if ((i >= 58) && (i <= 64))
+    {
+    
+      if (i == 58)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      
+      printf("\n%3d) Carattere: %c\tTipo: Punteggiatura", i, array[i]);
+    }
+
+    else if ((i >= 65) && (i <= 90))
+    {
+    
+      if (i == 65)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      
+      printf("\n%3d) Carattere: %c\tTipo: Maiuscolo", i, array[i]);
+    }
+
+    else if ((i >= 91) && (i <= 96))
+    {
+    
+      if (i == 91)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      
+      printf("\n%3d) Carattere: %c\tTipo: Punteggiatura", i, array[i]);
+    }
+
+    else if((i >= 97) && (i <= 122))
+    {
+    
+      if (i == 97)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      
+      printf("\n%3d) Carattere: %c\tTipo: Minuscolo", i, array[i]);
+    }
+
+    else if ((i >= 123) && (i <= 126))
+    {
+    
+      if (i == 123)
+      {
+        printf("\n\n-------------------------------------------------------------------\n");
+      }
+      printf("\n%3d) Carattere: %c\tTipo: Punteggiatura", i, array[i]);
+    }
+    
+    
+  }
+
+  printf("\n\n");
+  return 0;
+}
+/*
+12 dicembre 2021 Montecatini Terme Robert
+
+Dati pari e dispari, due array di N elementi,
+popolare l'array pari con soli numeri pari da 0 a N-2
+(Se N = 20 inserisce i valori 0, 2, 4, ..., 16, 18)
+e popolare l'array dispari con i valori da 1 a N-1
+(Se N = 20 inserire i valori 1, 3, 5, ... 17, 19).
+Copiare i due array in un array numeri di N elementi
+tale che l'array risulti popolato a valori crescenti (0,1,2,3, .., 18, 19)
+
+ciclo for - else if
+*/
+
+#include<stdio.h>
+#define ELEMENTI 10
+
+
+int main()
+{
+  int arrayPari[ELEMENTI];
+  int arrayDispari[ELEMENTI];
+
+  int doppioElementi = ELEMENTI * 2;
+  int arrayTotale[doppioElementi];
+
+  printf("\nVado a stampare \nprima i valori pari\npoi quelli dispari\ne infine tutti insieme\n");
+
+  printf("\n-----------------------------------------\n");
+  printf("\nArray con solo valori pari: \n\n");
+
+  for(int i = 0; i < ELEMENTI; i++)
+  {
+    arrayPari[i] = i * 2;
+    printf("\n%2d) Valore = %2d ", i, arrayPari[i]);
+  }
+
+
+  printf("\n-----------------------------------------\n");
+  printf("\nArray con solo valori dispari: \n\n");
+
+  for(int i = 0; i < ELEMENTI; i++)
+  {
+    arrayDispari[i] = i * 2 + 1;
+    printf("\n%2d) Valore = %2d ", i, arrayDispari[i]);
+  }
+
+  printf("\n-----------------------------------------\n");
+  printf("\nArray con tutti i valori: \n\n");
+
+  for(int i = 0, k = i; i < doppioElementi; i++, k++)
+  {
+    
+    if(i < ELEMENTI)
+    {
+      if(i %2 == 0)
+      {
+      arrayTotale[i] = arrayPari[k];
+      k--; 
+      }
+      else if(i %2 == 1)
+      {
+        arrayTotale[i] = arrayDispari[k];
+      }
+    }
+    else if(i >= ELEMENTI)
+    {
+      if(i %2 == 0)
+      {
+      arrayTotale[i] = arrayPari[i/2]; 
+      }
+      else if(i %2 == 1)
+      {
+        arrayTotale[i] = arrayDispari[i/2];
+      }
+    }
+
+    printf("\n%2d) Valore = %2d ", i, arrayTotale[i]);
+  }
+
+  printf("\n\n");
+  return 0;
+}
+/*
+12 dicembre 2021 Montecatini Terme Robert
+
+Stampare i divisori per ogni numero compreso tra 1 a 100
+
+ciclo for
+*/
+
+#include<stdio.h>
+#define ELEMENTI 100
+
+int main()
+{
+  printf("\nVado a stampare tutti i divisori per i numeri da 1 a %d", ELEMENTI);
+
+  for(int numero = 1; numero <= ELEMENTI; numero++)
+  {
+    printf("\n\n%3d)", numero);
+    for(int divisore = 1; divisore <= ELEMENTI; divisore++)
+    {
+    
+      if(numero %divisore == 0)
+      {
+        printf("\t%d", divisore);
+      }
+      
+    }
+    
+  }
+
+  printf("\n\n");
+  return 0;
+}

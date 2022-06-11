@@ -1,0 +1,306 @@
+/*
+09 dicembre 2021 Its Marchi Robert
+
+dati 4 numeri interi stampare il minore
+
+input - 4 numeri
+output - minore dei 4
+
+uso else if
+*/
+
+#include<stdio.h>
+
+int main()
+
+{
+    int numPrimo, numSecondo, numTerzo, numQuarto;
+
+    printf("\nDati quattro numeri vado a vedere qual è il minore.\n");
+
+
+    numPrimo = 12;
+    numSecondo = 3;
+    numTerzo = 134;
+    numQuarto = 25;
+
+    printf("\nIl valore del primo numero è: %d \nIl secondo è: %d \nIl terzo è: %d \nIl quarto numero è: %d \n", numPrimo, numSecondo, numTerzo, numQuarto);
+
+    //vado a controllare quale dei numeri dati è minore
+    if((numPrimo < numSecondo) && (numPrimo < numTerzo) && (numPrimo < numQuarto))
+    {
+        printf("\nIl minore dei quattro numeri è %d", numPrimo);
+    }
+    else if ((numSecondo < numPrimo) && (numSecondo < numTerzo) && (numSecondo < numQuarto))
+    {
+        printf("\nIl minore dei quattro numeri è %d", numSecondo);
+    }
+    else if ((numTerzo < numPrimo) && (numTerzo < numSecondo) && (numTerzo < numQuarto))
+    {
+        printf("\nIl minore dei quattro numeri è %d", numTerzo);
+    }
+    else
+    {
+        printf("\nIl minore dei quattro numeri è %d", numQuarto);
+    }
+    
+    printf("\n\n");
+
+return 0;
+}
+/*
+9 dicembre 2021 Its Marchi Robert
+
+dati 5 numeri interi stabilire se sono pari o dispari
+
+input - 5 numeri
+output - pari o dispari
+
+uso else if
+*/
+
+#include<stdio.h>
+
+int main()
+{
+    int numPrimo, numSecondo, numTerzo, numQuarto, numQuinto;
+    
+    numPrimo = 12;
+    numSecondo = 51;
+    numTerzo = 34;
+    numQuarto = 9;
+    numQuinto = 21;
+
+    printf("\n\nVado a vedere alcuni numeri se sono pari o dispari\n\n");
+
+    //primo numero
+    if(numPrimo %2 == 0)
+    {
+        printf("\nIl numero %d è pari", numPrimo);
+    }
+    else if(numPrimo %2 == 1)
+    {
+        printf("\nIl numero %d è dispari", numPrimo);
+    }
+
+    //secondo numero
+    if(numSecondo %2 == 0)
+    {
+        printf("\nIl numero %d è pari", numSecondo);
+    }
+    else if(numSecondo %2 == 1)
+    {
+        printf("\nIl numero %d è dispari", numSecondo);
+    }
+
+    //terzo numero
+    if(numTerzo %2 == 0)
+    {
+        printf("\nIl numero %d è pari", numTerzo);
+    }
+    else if(numTerzo %2 == 1)
+    {
+        printf("\nIl numero %d è dispari", numTerzo);
+    }
+    
+    //quarto numero
+    if(numQuarto %2 == 0)
+    {
+        printf("\nIl numero %d è pari", numQuarto);
+    }
+    else if(numQuarto %2 == 1)
+    {
+        printf("\nIl numero %d è dispari", numQuarto);
+    }
+
+    //quinto numero
+    if(numQuinto %2 == 0)
+    {
+        printf("\nIl numero %d è pari", numQuinto);
+    }
+    else if(numQuinto %2 == 1)
+    {
+        printf("\nIl numero %d è dispari", numQuinto);
+    }
+    printf("\n\n");
+
+    return 0;
+}
+/*
+9 dicembre 2021 Its Marchi Robert
+
+Letti N numeri reali positivi trovare il maggiore
+
+input - array N elementi
+output - maggiore
+
+uso scanf - ciclo for 
+*/
+
+#include<stdio.h>
+#define ELEMENTI 10
+int main()
+{
+    float array[ELEMENTI];
+    float maggiore = 0;
+
+    printf("Adesso ti faro inserire %d elementi reali positivi: ", ELEMENTI);
+
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        printf("\nInserisci numero: ");
+        scanf("%f", &array[i]);
+    }
+
+    printf("\nBene adesso andro a verificare qual è il maggiore: \n");
+
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        if(maggiore > array[i])
+        {
+            i++;
+        }
+        else
+        {
+            maggiore = array[i];
+        }
+    }
+
+    printf("\n Il maggiore dei numeri da te inseriti è %f ", maggiore);
+
+    printf("\n\n");
+    return 0;
+}
+/*
+9 dicembre 2021 Its Marchi Robert
+
+Dato un array di N interi popolato con il valore dell'indice
+stampare i valore che sono divisibili per 3 o per 7
+
+input - array N ELEMENTI
+output - numeri divisibili per 3 o per 7
+
+uso ciclo for - esle if
+*/
+
+#include<stdio.h>
+#define ELEMENTI 21
+
+int main()
+
+{
+    int array[ELEMENTI];
+    
+    printf("\nVado a stampare i numeri divisibili per 3 o per 7 fino a %d \n", ELEMENTI);
+    for(int i = 0; i <= ELEMENTI; i++)
+    {
+        array[i] = i;
+        
+        if((array[i] %3 == 0) && (array[i] %7 == 0) && (array[i] != 0))
+        {
+            i++; // se il numero è divisibile per entrambi vado a controllare il numero successivo
+        }
+        else if((array[i] %3 == 0) && (array[i] != 0))
+        {
+            printf("\n%2d) Il numero %2d è divisibile per 3", i, array[i]);
+        }
+        else if ((array[i] %7 == 0) && (array[i] != 0))
+        {
+            printf("\n%2d) Il numero %2d è divisibile per 7", i, array[i]);
+        }
+    }
+
+    printf("\n\n");
+    return 0;
+}
+/*
+9 dicembre 2021 Its Marchi Robert
+
+dato un array di N ELEMENTI popolato con il valore dell'indice al cubo,
+stamparlo in 2 modalità di indice decrescente e crescente visualizzando 
+sia il valore dell'indice 
+sia il valore dell'array
+
+input - array N ELEMENTI
+output - visualizzazione in 2 modalità
+
+uso ciclo for doppio indice
+*/
+
+#include<stdio.h>
+#define ELEMENTI 10
+
+int main()
+{
+    int array[ELEMENTI];
+
+    printf("Stampo i cubi degli indici corrispondenti ma in ordine decrescente\n\n");
+
+    for(int i = 0, k = ELEMENTI - 1; i < ELEMENTI, k >= 0; i++, k--)
+    {
+        array[i] = k * k * k;
+        printf("\n%d) Valore = %3d", i, array[i]);
+    }
+
+    printf("\nStampo i cubi degli indici corrispondenti ma in ordine crescente\n\n");
+
+    for(int i = ELEMENTI - 1, k = 0; i >= 0, k < ELEMENTI; i--, k++)
+    {
+        array[i] = k * k * k;
+        printf("\n%d) Valore = %3d", i, array[i]);
+    }
+
+
+
+    printf("\n\n");
+    return 0;
+}
+/*
+9 dicembre 2021 Its Marchi Robert
+
+stampare i numeri primi da 1 a 100
+
+input - numeri da 1 a 100
+output - numeri primi
+
+uso ciclo for 
+*/
+
+#include<stdio.h>
+#define ELEMENTI 100
+#define DIVISORIMAX 2
+
+int main()
+{
+    int numero;
+    int numDivisori;
+    int ultimoDivisore;
+    
+    printf("\nVado a stampare i numeri primi compresi tra 1 e 100\n\n");
+    
+    for(int i = 1; i <= ELEMENTI; i++)
+    {
+        numero = i;
+        numDivisori = 0;
+
+        for(ultimoDivisore = 1; ultimoDivisore <= numero; ultimoDivisore++)
+        {
+            if(numero %ultimoDivisore == 0)
+            {
+                numDivisori++;            
+            }    
+        }
+    
+        /*un numero per essere primo deve essere diisibile per 1 e per se stesso
+        quindi non puo avere piu di 2 divisori*/
+
+        if(numDivisori <= DIVISORIMAX)
+        {
+            printf("\nIl numero %2d è un numero primo", numero);
+        }
+
+    }    
+
+    printf("\n\n");
+    return 0;
+}

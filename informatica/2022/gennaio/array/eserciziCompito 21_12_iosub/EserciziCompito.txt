@@ -1,0 +1,196 @@
+/*
+21 dicembre Its Marchi Robert
+
+Popolare un array con N numeri interi random (range 1-100) con N = 10. 
+Stampare l'array ordinato in modo crescente con l'opportuna informazione all'utente.
+
+input - array di N elementi random
+output - array ordinato in modo crescente
+
+*/
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define ELEMENTI 12
+
+int main()
+{
+    int array[ELEMENTI];
+    int tmp;
+
+    printf("Vado a stampare %d numeri random\n\n", ELEMENTI);
+    srand(time(0));
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        array[i] = rand() %100 + 1;
+        printf("%2d) Valore = %3d\n", i, array[i]);
+    }
+
+    printf("\n\nAdesso metto in ordine crescente l'array\n\n");
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        for(int i = 0; i < ELEMENTI; i++)
+        {
+            for(int i = 0; i < ELEMENTI; i++)
+            {
+                tmp = 0;
+                if((array[i + 1] > 0) && (array[i + 1] < array[i]))
+                {
+                    tmp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tmp; 
+                }
+            }
+        }
+    
+        printf("%2d) Valore = %3d\n", i, array[i]);
+      
+    }
+
+    printf("\n\n");
+    return 0;
+}
+/*
+3 gennaio 2022 Montecatini Temre Robert
+
+Popolare un array con N numeri interi random (range 65-90) con N = 26. 
+Stampare le vocali presenti con l'opportuna informazione all'utente.
+
+input - N ELEMENTI random compresi tra 65 e 90
+output - vocali 
+
+uso ciclo for - if - or
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define ELEMENTI 26
+
+int main(void) 
+{
+    int array[ELEMENTI];
+
+    printf("\nVado a caricare un array con numeri random range 65-90.\nPoi stampo solo i valori corrispondenti a vocali secondo la tabella ASCII\n\n");
+    srand(time(0));
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        array[i] = rand() % 26 + 65;
+    
+        if((array[i] == 'A') || (array[i] == 'E') || (array[i] == 'I') || (array[i] == 'O') || (array[i] == 'U'))
+        {
+            printf("\n Valore = %d -- Tabella ASCII == %c", array[i], array[i]);
+        }
+    
+    }
+
+
+
+    printf("\n\n");
+    return 0;
+}
+/*
+3 gennaio 2022 Montecatini Temre Robert
+
+Popolare un array con N numeri interi random (range 65-90) con N = 100. 
+Stampare ogni vocale e il numero delle volte che è presente e il numero totale delle vocali, con l'opportuna informazione all'utente.
+(La vocale ''A"  è presente 0 volte, la vocale  "B" è presente 3 volte ....  il numero delle vocali presenti è 17)
+
+input - N ELEMENTI random compresi tra 65 e 90.
+output - vocali e quante volte sono presenti.
+
+uso ciclo for - if 
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define ELEMENTI 100
+
+int main(void) 
+{
+    int array[ELEMENTI];
+  
+    int contaA = 0, contaE = 0, contaI = 0, contaO = 0, contaU = 0, contaVocali = 0;
+
+    printf("\nVado a caricare un array con numeri random range 65-90.\nPoi stampo solo i valori corrispondenti a vocali secondo la tabella ASCII\ne conto quante volte sono ripetutte\n\n");
+    srand(time(0));
+    for(int i = 0; i < ELEMENTI; i++)
+    {
+        array[i] = rand() % 26 + 65;
+    
+        //stampa le vocali
+        if((array[i] == 'A') || (array[i] == 'E') || (array[i] == 'I') || (array[i] == 'O') || (array[i] == 'U'))
+        {
+            printf("\n Valore = %d -- Tabella ASCII == %c", array[i], array[i]);
+        }
+
+
+        //conta le vocali totali
+        if((array[i] == 'A') || (array[i] == 'E') || (array[i] == 'I') || (array[i] == 'O') || (array[i] == 'U'))
+        {
+            contaVocali++;
+        }
+
+        //conta singole vocali
+        if(array[i] == 'A')
+        {
+            contaA++;
+        }
+        else if(array[i] == 'E')
+        {
+            contaE++;
+        }
+        else if(array[i] == 'I')
+        {
+            contaI++;
+        }
+        else if(array[i] == 'O')
+        {
+            contaO++;
+        }
+        else if(array[i] == 'U')
+        {
+            contaU++;
+        }
+
+    }
+
+    printf("\n\nLe vocali sono in tutto %d\nLe 'A' sono %d\nLe 'E' sono %d\nLe 'I' sono %d\nLe 'O' sono %d\nLe 'U' sono %d", contaVocali, contaA, contaE, contaI, contaO, contaU);
+ 
+
+    printf("\n\n");
+    return 0;
+}
+/*
+21 dicembre Its Marchi Robert
+
+Scrivere una password random di 12 caratteri che contenga soltanto caratteri stampabile (USO TABELLA ASCII).
+Stampare la password e informare debitamente l'utente.
+
+input - paswword random
+output - password
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#define CARATTERI 12
+
+int main()
+{
+    int password[CARATTERI];
+
+    printf("Vado a generare una password di 12 caratteri casuali\n\n");
+    
+    srand(time(0));
+    for(int i = 0; i < CARATTERI; i++)
+    {
+        password[i] = rand() % 94 + 32;
+        
+        printf("%c", password[i]);
+    }
+
+    printf("\n\n");
+    return 0;
+}
